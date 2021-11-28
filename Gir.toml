@@ -1,0 +1,72 @@
+[options]
+library = "Vte"
+version = "2.91"
+min_cfg_version = "0.64.1"
+target_path = "."
+work_mode = "normal"
+girs_directories = ["../gir-files"]
+#generate_safety_asserts = true
+deprecate_by_min_version = true
+single_version_file = true
+
+generate = [
+ "Vte.CursorBlinkMode",
+ "Vte.CursorShape",
+ "Vte.EraseBinding",
+ "Vte.FeatureFlags",
+ "Vte.Format",
+ "Vte.PtyFlags",
+ "Vte.PtyError",
+# "Vte.Regex",
+# "Vte.RegexError",
+ "Vte.TextBlinkMode",
+ "Vte.WriteFlags",
+ "Vte.TerminalSpawnAsyncCallback",
+]
+
+manual = [
+ "Vte.CharAttributes",
+
+ "Gtk.Buildable",
+ "Gtk.Scrollable",
+ "Gtk.Widget",
+
+ "Gdk.RGBA",
+ "Gdk.Event",
+
+ "Gio.Initable",
+ "Gio.OutputStream",
+ "Gio.AsyncResult",
+ "Gio.Cancellable",
+ "Gio.AsyncReadyCallback",
+# "GObject.InitiallyUnowned",
+ "GLib.Error",
+ "GLib.SpawnFlags",
+ "GLib.SpawnChildSetupFunc",
+ "GLib.Pid",
+ "GLib.DestroyNotify",
+
+ "Pango.FontDescription",
+]
+
+[[object]]
+name = "Vte.Terminal"
+status = "generate"
+generate_builder = true
+
+  [object.function]
+  name = "set_colors"
+  ignore = true
+  #[[object.function]]
+  #name = "spawn_async"
+  #no_future = true
+
+[[object]]
+name = "Vte.Pty"
+status = "generate"
+generate_builder = true
+
+
+  [object.property]
+  name = "flags"
+  ignore = true

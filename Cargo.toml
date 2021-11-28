@@ -1,0 +1,20 @@
+[package]
+name = "vte"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+bitflags = "1.0"
+glib = "0.14"
+gio = "0.14"
+gio-sys = "0.14"
+gobject-sys = "0.14"
+glib-sys = "0.14"
+gtk = "0.14"
+gdk = "0.14"
+gdk-sys = "0.14"
+pango = "0.14"
+ffi = { package = "vte-sys", path = "vte-sys" }
