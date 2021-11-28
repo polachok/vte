@@ -1,0 +1,46 @@
+[package]
+name = "vte-sys"
+version = "0.0.1"
+edition = "2021"
+build = "build.rs"
+[package.metadata.system-deps.vte_2_91]
+name = "vte-2.91"
+version = "0.64.1"
+[package.metadata.docs.rs]
+features = ["dox"]
+
+[lib]
+name = "vte_sys"
+
+[dependencies]
+libc = "0.2"
+
+[dependencies.gio]
+version = "0.14"
+package = "gio-sys"
+
+[dependencies.glib]
+version = "0.14"
+package = "glib-sys"
+
+[dependencies.gdk]
+version = "0.14"
+package = "gdk-sys"
+
+[dependencies.gtk]
+version = "0.14"
+package = "gtk-sys"
+
+[dependencies.pango]
+version = "0.14"
+package = "pango-sys"
+
+[build-dependencies]
+system-deps = "6"
+
+[dev-dependencies]
+shell-words = "1.0.0"
+tempfile = "3"
+
+[features]
+dox = []
